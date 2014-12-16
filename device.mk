@@ -39,12 +39,6 @@ PRODUCT_PACKAGES += \
         librs_jni
 
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/init.awifi.usb.rc:root/init.awifi.usb.rc \
-	$(LOCAL_PATH)/init.awifi.rc:root/init.awifi.rc \
-	$(LOCAL_PATH)/fstab.gvar:root/fstab.awifi \
-	$(LOCAL_PATH)/ueventd.awifi.rc:root/ueventd.awifi.rc
-
-PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
         $(LOCAL_PATH)/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
         $(LOCAL_PATH)/WCNSS_qcom_cfg.ini:system/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
@@ -59,16 +53,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml
-
-# Prebuilt kl and kcm keymaps
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
-	$(LOCAL_PATH)/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
-	$(LOCAL_PATH)/awifi-keypad-8064.kl:system/usr/keylayout/awifi-keypad-8064.kl
-
-# Prebuilt input device calibration files
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/touch_mxt1188S.idc:system/usr/idc/touch_mxt1188S.idc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
